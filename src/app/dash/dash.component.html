@@ -1,0 +1,56 @@
+<div style="text-align: center;"><h3>Welcome {{user}}</h3></div>
+
+
+
+<div class="container">
+  <h3>select your colleges.</h3>
+  <hr>
+  
+  <div class="row">
+    
+    <div class="col-md-3">
+      <select class="custom-select" [(ngModel)]="college" (change)="getBranch($event.target.value)">
+        <option [value]="college.collegeName" *ngFor="let college of collegelist"> {{ college.collegeName }}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select class="custom-select" [(ngModel)]="branch">
+        <option [value]="branch.branchName" *ngFor="let branch of branches"> {{ branch.branchName }}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <button type="submit" class="btn btn-primary" (click) = "addPreferences()">Add Preference</button>
+    </div>
+    <div class="col-md-3">
+      <button type="submit" class="btn btn-primary" (click) = "clearPreferences()">Clear Preferences</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">COLLEGE</th>
+          <th scope="col">BRANCH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let col of collegeBranchList">
+          <td>{{ col.college }}</td>
+          <td>{{ col.branch }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <button type="submit" class="btn btn-primary" (click) = "submitPreferences()">Submit Preferences</button>
+  </div>
+
+  <hr>
+  <div style="width: 20%; align-self: center; margin: auto;" class="alert alert-danger" role="alert" *ngIf=date>Results will be out on {{date}}</div>
+
+  <hr>
+    
+  </div>
+
+  

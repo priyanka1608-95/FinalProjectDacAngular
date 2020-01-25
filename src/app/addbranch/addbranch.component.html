@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+   .add{
+      margin: auto;
+      width: 60%;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+</style>
+<body>
+
+  
+  <div class="container" style=" align-self: center;  background-color: black; opacity: 0.7; margin: auto; width: 50%;">
+  <div class="add">
+      <h2 style="text-align: center; color: cornsilk;">Add branches</h2>
+
+<form #addBranchForm="ngForm" (ngSubmit)="addBranch(addBranchForm)" role="form">
+
+  
+
+    <div class="form-group">
+        <b>Collage Id:</b>
+        <input type="text" ngModel name="collegeId" class="form-control" id="" placeholder="college">
+      </div>
+
+    <div class="form-group">
+      <b>Branch Name:</b>
+      <input type="text" ngModel name="branchName" class="form-control" id="" placeholder="branch name">
+    </div>
+  
+    <div class="form-group">
+        <b>Total seats:</b>
+        <input type="text" ngModel name="totalSeats" class="form-control" id="" placeholder="seats">
+      </div>
+
+
+
+    <div class="form-group">
+      <b>Available seats:</b>
+        <input type="text" ngModel name="available_seats" class="form-control" id="" placeholder="seats">
+      </div>
+  
+      
+    <div class="form-group">
+        <b>Allocated seats:</b>
+          <input type="text" ngModel name="allocated_seats" class="form-control" id="" placeholder="seats">
+        </div>
+
+        <div class="form-group">
+            <b>Criteria:</b>
+              <input type="text" ngModel name="criteria" class="form-control" id="" placeholder="criteria">
+            </div>
+    
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+        <br>
+      <a style="color: cornsilk;"  routerLink="/adminhome">back to admin page</a>
+  </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+   
+
+</style>
+
+<body>
+  
+<div class="container" style=" align-self: center;  background-color: black; opacity: 0.7; margin: auto; width: 50%;">
+<div class="register">
+  <h2 style="color: blanchedalmond;  text-align: center;">Registration Form</h2>
+    <form  #myForm="ngForm" (ngSubmit)="register(myForm)" role="form" style="width: 50%;">
+    
+        <div class="form-group">
+        
+            <b>Name</b>
+            <input type="text" name="name" ngModel class="form-control" id="" placeholder="user name " required="true"  style="width: 180%">
+          </div>
+    
+    
+          <div class="form-group">
+        
+              <b>Address</b> 
+              <input type="text" name="address" ngModel class="form-control" id="" placeholder="Input address" required="true"   style="width: 180%">
+            </div>
+    
+    
+            <div class="form-group">
+        
+               <b>Date of Birth</b> 
+                <input type="date" name="dob" ngModel class="form-control" id="" placeholder="Input dob" required="true"   style="width: 180%">
+              </div>
+    
+              <div class="form-group">
+        
+                <b>Gender</b>
+                  <br>
+                  <input ngModel type="radio" name="gender" value="male" checked> <b>Male</b> &nbsp; &nbsp;
+                  <input ngModel type="radio" name="gender" value="female"> <b>Female</b><br>
+                 
+                </div>
+        
+    
+                
+    
+      <div class="form-group">
+    
+       <b>Email</b> 
+        <input type="email" name="email" ngModel  class="form-control" id="" placeholder="Input Email" required="true"   style="width: 180%">
+      </div>
+      
+    
+      <div class="form-group">
+        
+          <b>SSC Marks</b>
+          <input type="number" name="ssc" ngModel class="form-control" id="" placeholder="Input" required="true"   style="width: 180%">
+        </div>
+    
+        <div class="form-group">
+        
+            <b>HSC marks</b>
+            <input type="number" name="hsc" ngModel class="form-control" id="" placeholder="Input" required="true"   style="width: 180%">
+          </div>
+    
+          <div class="form-group">
+        
+              <b>CET marks</b>
+              <input type="number" name="cet" ngModel class="form-control" id="" placeholder="Input" required="true"   style="width: 180%">
+            </div>
+    
+    
+      <div class="form-group">
+       <b> Mobile</b>
+        <input type="tel" name="phone" ngModel class="form-control" id="" placeholder="Input" required="true"   style="width: 180%">
+      </div>
+     
+      <div class="form-group">
+       <b> Password</b>
+        <input type="password" name="password" ngModel class="form-control" id="" placeholder="Input" required="true"   style="width: 180%">
+      </div>
+      <div class="form-group" style="display: flex;
+      align-items: center;
+      justify-content: center; ">
+      <button type="submit" class="btn btn-danger" >Submit</button>
+    </div>
+      
+      
+      
+    </form>
+    
+    </div>
+  </div>
+
+</body>
+</html>

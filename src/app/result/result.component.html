@@ -1,0 +1,20 @@
+
+
+
+<div style="text-align: center;"><h3>Welcome {{user}}</h3></div>
+<br>
+<br>
+<div class="container" style=" align-self: center; margin: auto; width: 18%;">
+  <!-- <a routerLink="/result">Click here to see results</a> -->
+  
+  <button (click)=getResultOfStudent() type="button" class="btn btn-danger"> Click here to see result</button>
+  
+</div>
+
+<hr>
+<div style="width: 20%; align-self: center; margin: auto;" class="alert alert-danger" role="alert" *ngIf=message> {{message}}</div>
+
+<hr>
+
+
+
